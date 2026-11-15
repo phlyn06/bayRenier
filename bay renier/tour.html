@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tour Guide &amp; Aerial Photographer | Alicia Panoramic Park, Bohol</title>
+<meta name="description" content="Tour guide and drone/camera photographer at Alicia Panoramic Park, Bohol. 4 years of experience. Book through Facebook.">
+<style>
+:root{
+  --bg:#0f1a14; --surface:#17261d; --text:#eef3ec; --muted:#a9b8ac;
+  --accent:#f4a23c; --accent-text:#1a1208; --line:#2a3f31;
+  color-scheme:dark;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){
+    --bg:#f6f3ea; --surface:#ffffff; --text:#16241b; --muted:#506356;
+    --accent:#c76a00; --accent-text:#ffffff; --line:#dcd6c4; color-scheme:light;
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.65}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;margin:0 0 .5em}
+a{color:inherit}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;font-weight:700;margin:0 0 .75rem}
+h2{font-size:clamp(1.7rem,4vw,2.4rem)}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;flex-wrap:wrap}
+.brand{font-family:Georgia,serif;font-weight:700;text-decoration:none;font-size:1.1rem}
+.links{display:flex;gap:18px;flex-wrap:wrap;font-size:.92rem}
+.links a{text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--accent)}
+
+/* buttons */
+.btn{display:inline-block;background:var(--accent);color:var(--accent-text);font-weight:700;text-decoration:none;padding:14px 26px;border-radius:999px;border:2px solid var(--accent)}
+.btn:hover{filter:brightness(1.1)}
+.btn.ghost{background:transparent;color:var(--text);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:1.5rem}
+
+/* hero */
+.hero{
+  padding:96px 0 80px;
+  color:#fff;
+  background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("back.jpg") center/cover no-repeat;
+}
+.hero p.lead,
+.hero .stat span{color:rgba(255,255,255,.85)}
+.hero .btn.ghost{color:#fff;border-color:rgba(255,255,255,.6)}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:52ch}
+.stats{display:flex;gap:32px;flex-wrap:wrap;margin-top:2.5rem}
+.stat strong{display:block;font-family:Georgia,serif;font-size:2rem;color:var(--accent)}
+.stat span{color:var(--muted);font-size:.9rem}
+
+/* cards */
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px}
+.card .icon{font-size:2rem;margin-bottom:.4rem}
+.card p{color:var(--muted);margin:0}
+.about{display:grid;gap:32px;grid-template-columns:1fr 1fr;align-items:center}
+.about p{color:var(--muted)}
+.portrait{aspect-ratio:4/5;border-radius:18px;border:1px solid var(--line);overflow:hidden;margin:0}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* gallery */
+.gallery{display:grid;gap:14px;grid-template-columns:repeat(3,1fr)}
+.shot{position:relative;overflow:hidden;aspect-ratio:4/3;border-radius:14px;border:1px solid var(--line);margin:0}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+.shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;font-size:.85rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.65))}
+.shot.wide{grid-column:span 2}
+.s1{background:linear-gradient(135deg,#1d5c3d,#0e2a1d)}
+.s2{background:linear-gradient(135deg,#f4a23c,#8c3b1d)}
+.s3{background:linear-gradient(135deg,#3a7ca5,#16324a)}
+.s4{background:linear-gradient(135deg,#6d8b3a,#1f3317)}
+.s5{background:linear-gradient(135deg,#d96c4a,#3a1a2c)}
+.note{color:var(--muted);font-size:.9rem;margin-top:1rem}
+
+/* book */
+.book{text-align:center;background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.book p{color:var(--muted);max-width:50ch;margin:0 auto 1.5rem}
+.steps{list-style:none;padding:0;margin:0 auto 2rem;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));max-width:760px;text-align:left}
+.steps li{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:16px;color:var(--muted);font-size:.95rem}
+.steps b{color:var(--accent);display:block}
+
+footer{padding:28px 0;color:var(--muted);font-size:.88rem;text-align:center}
+
+@media (max-width:760px){
+  section{padding:52px 0}
+  .hero{padding:60px 0 52px}
+  .about{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .shot.wide{grid-column:span 2}
+  .links{gap:12px;font-size:.85rem}
+}
+@media (max-width:420px){
+  .gallery{grid-template-columns:1fr}
+  .shot.wide{grid-column:auto}
+  .btn{width:100%;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#top">MARK RENIER CUTANDA</a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#book">Book</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Alicia Panoramic Park · Bohol</p>
+      <h1>Your guide. Your story. From above.</h1>
+      <p class="lead">Local tour guide who captures your adventure with drone and camera shots, so you take home more than just memories.</p>
+      <div class="btns">
+        <a class="btn" href="https://www.facebook.com/" target="_blank" rel="noopener">Book on Facebook</a>
+        <a class="btn ghost" href="#gallery">See the shots</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>4+</strong><span>Years of experience</span></div>
+        <div class="stat"><strong>Drone</strong><span>Aerial photo &amp; video</span></div>
+        <div class="stat"><strong>Local</strong><span>Alicia, Bohol</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>Hi, I’m Mark Renier Cutanda.</h2>
+        <p style="text-align: justify;">For 4 years I’ve been guiding visitors around Alicia Panoramic Park, sharing the views, the stories and the best spots most people miss.</p>
+        <p>Along the way I picked up drone and camera work, so I can guide you and capture the moment at the same time. No need to hand your phone to a stranger.</p>
+      </div>
+      <figure class="portrait"><img alt="Portrait of the tour guide" src="rens.jpg"></figure>
+    </div>
+  </section>
+
+  <section id="services" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <p class="eyebrow">Services</p>
+      <h2>What I offer</h2>
+      <div class="grid">
+        <div class="card"><div class="icon">🧭</div><h3>Guided tours</h3><p>Walk the park with a local who knows the trails, viewpoints and the best time to go.</p></div>
+        <div class="card"><div class="icon">🚁</div><h3>Drone shots</h3><p>Sweeping aerial photos and video of the hills, the park and you in the scene.</p></div>
+        <div class="card"><div class="icon">📸</div><h3>Camera shots</h3><p>Solo, couple, family or group photos taken during the tour, no extra trip needed.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <p class="eyebrow">Gallery</p>
+      <h2>Moments from the park</h2>
+      <div class="gallery">
+        <figure class="shot wide"><img alt="Drone view of green hills at sunrise" src="drone.jpg"><figcaption>Drone shot</figcaption></figure>
+        <figure class="shot"><img alt="Sunrise over the hills" src="sunrise.jpg"><figcaption>Sunrise view</figcaption></figure>
+        <figure class="shot"><img alt="Camera shot at the viewpoint" src="cam.jpg"><figcaption>Camera shot</figcaption></figure>
+        <figure class="shot"><img alt="Guests walking a park trail" src="quest.jpg"><figcaption>Guests on tour</figcaption></figure>
+        <figure class="shot"><img alt="Aerial view of fields and a path" src="aerial.jpg"><figcaption>Aerial view</figcaption></figure>
+      
+  </section>
+
+  <section id="book" class="book">
+    <div class="wrap">
+      <p class="eyebrow">Book a tour</p>
+      <h2>Ready to explore?</h2>
+      <p>Send a message on Facebook with your date, group size and whether you want drone or camera shots.</p>
+      <ol class="steps">
+        <li><b>1. Message me</b>Tell me your date and group size.</li>
+        <li><b>2. Confirm</b>We agree on the time and package.</li>
+        <li><b>3. Enjoy</b>Tour the park and get your shots.</li>
+      </ol>
+      <a class="btn" href="https://www.facebook.com/" target="_blank" rel="noopener">Message me on Facebook</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© Mark Renier Cutanda · Tour Guide &amp; Aerial Photographer · Alicia Panoramic Park, Bohol</div>
+</footer>
+
+</body>
+</html>
